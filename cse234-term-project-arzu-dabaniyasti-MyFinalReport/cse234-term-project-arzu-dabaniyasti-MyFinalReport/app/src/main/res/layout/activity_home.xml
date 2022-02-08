@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container"
+        android:layout_above="@id/bottom_navigation">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#FFFFFF"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="#fa4666">
+                    <TextView
+                        android:id="@+id/UserName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toStartOf="@+id/trayImage"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <ImageView
+                        android:id="@+id/trayImage"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:padding="7dp"
+                        android:src="@drawable/tray"
+                        app:layout_constraintEnd_toStartOf="@+id/WaitForIt"
+                        app:layout_constraintStart_toEndOf="@+id/UserName"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+                    <TextView
+                        android:id="@+id/WaitForIt"
+                        android:layout_width="0dp"
+                        android:layout_height="?attr/actionBarSize"
+                        android:gravity="center"
+                        android:text=" Wait For It  "
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+    </FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="#fa4666"
+        app:itemRippleColor="#FA4666"
+        app:itemTextColor="#fa4666"
+        app:menu="@menu/navigationmenu" />
+</RelativeLayout>

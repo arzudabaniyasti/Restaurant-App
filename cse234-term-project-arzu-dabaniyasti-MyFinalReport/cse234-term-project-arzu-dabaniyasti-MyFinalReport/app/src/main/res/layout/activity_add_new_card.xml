@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewCardActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/addanewcreditcardbutton">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFFFFF"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#fa4666">
+
+                <TextView
+                    android:id="@+id/UserName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/trayImage"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/trayImage"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:padding="7dp"
+                    android:src="@drawable/tray"
+                    app:layout_constraintEnd_toStartOf="@+id/WaitForIt"
+                    app:layout_constraintStart_toEndOf="@+id/UserName"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/WaitForIt"
+                    android:layout_width="0dp"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="center"
+                    android:text=" Add Card  "
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:id="@+id/relative1">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/creditcard"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BANK NAME"
+            android:id="@+id/bankname"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="50dp"></TextView>
+
+
+        <TextView
+            android:id="@+id/card_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/code"
+            android:textSize="20sp"
+            android:layout_below="@id/bankname"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="@color/white"
+            ></TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_code"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="CARD HOLDER"
+                android:textSize="15sp"
+                android:layout_below="@id/card_code"
+                android:textColor="@color/white"
+                android:id="@+id/cardHolder"
+                ></TextView>
+            <TextView
+                android:id="@+id/creditcard_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="06"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" / "
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                ></TextView>
+            <TextView
+                android:id="@+id/creditcard_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                ></TextView>
+            <TextView
+                android:id="@+id/CVC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CVV"
+                android:textSize="20sp"
+                android:layout_marginLeft="50dp"
+                android:textColor="#fa4666"
+                android:textStyle="bold"
+                ></TextView>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative1"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CARD NAME"
+            android:layout_marginLeft="34dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:id="@+id/tw1"/>
+        <EditText
+            android:id="@+id/cardnameedit"
+            android:layout_below="@id/tw1"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:hint="Your Card Name"
+            android:textColorHint="#fa4666" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CARD NUMBER"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@id/cardnameedit"
+            android:id="@+id/tw2"/>
+        <EditText
+            android:id="@+id/cardedit1"
+            android:layout_below="@id/tw2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:hint="XXXX"
+            android:textColorHint="#fa4666"
+            android:maxLength="4"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/cardedit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tw2"
+            android:hint="XXXX"
+            android:textColorHint="#fa4666"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/cardedit1"
+            android:maxLength="4"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/cardedit3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tw2"
+            android:hint="XXXX"
+            android:textColorHint="#fa4666"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/cardedit2"
+            android:maxLength="4"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/cardedit4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tw2"
+            android:hint="XXXX"
+            android:textColorHint="#fa4666"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/cardedit3"
+            android:maxLength="4"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CARD HOLDER"
+            android:layout_marginLeft="34dp"
+            android:textSize="15sp"
+            android:layout_below="@+id/cardedit1"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tw3"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/cardholder_name"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Name Surname"
+            android:layout_below="@id/tw3"
+            android:layout_marginLeft="32dp"
+            android:textColorHint="#fa4666"/>
+ <TextView
+     android:id="@+id/tw4"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="EXPİRY DATE"
+     android:layout_below="@id/cardholder_name"
+     android:layout_marginLeft="34dp"
+     android:layout_marginTop="10dp"
+     android:textStyle="bold"
+     android:textSize="15sp"
+     />
+        <EditText
+            android:id="@+id/cardmonthedit"
+            android:layout_below="@id/tw4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:hint="MM"
+            android:textColorHint="#fa4666"
+            android:maxLength="2"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/cardyearedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tw4"
+            android:hint="YY"
+            android:textColorHint="#fa4666"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/cardmonthedit"
+            android:maxLength="2"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SECURITY CODE"
+            android:layout_marginLeft="34dp"
+            android:textSize="15sp"
+            android:layout_below="@+id/cardmonthedit"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tw5"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/card_CVV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="CVV"
+            android:layout_below="@id/tw5"
+            android:layout_marginLeft="32dp"
+            android:textColorHint="#fa4666"
+            android:maxLength="3"
+            android:inputType="number" />
+
+    </RelativeLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addanewcreditcardbutton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_confirmbasket"
+        android:text="ADD A NEW CREDIT CARD"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout>

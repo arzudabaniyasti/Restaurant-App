@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/homeNavigation"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"></item>
+    <item android:id="@+id/kitchenNavigation"
+        android:icon="@drawable/ic_baseline_restaurant_24"
+        android:title="Kitchen"></item>
+    <item android:id="@+id/reservationNavigation"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        android:title="Reservation"></item>
+    <item android:id="@+id/othersNavigation"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="My Profile"></item>
+</menu>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/reservationbackground">
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="170dp"
+        android:ems="10"
+        android:padding="15dp"
+        android:background="@color/white"
+        android:alpha="0.7"
+        android:textStyle="bold"
+        android:hint="Name Surname"
+        android:textColorHint="#3b3b3b"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:padding="15dp"
+        android:background="@color/white"
+        android:alpha="0.7"
+        android:textStyle="bold"
+        android:hint="Phone"
+        android:textColorHint="#3b3b3b"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:padding="15dp"
+        android:background="@color/white"
+        android:alpha="0.7"
+        android:textStyle="bold"
+        android:hint="Person"
+        android:textColorHint="#3b3b3b"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:padding="15dp"
+        android:background="@color/white"
+        android:alpha="0.7"
+        android:textStyle="bold"
+        android:hint="Date"
+        android:textColorHint="#3b3b3b"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:ems="10"
+        android:padding="15dp"
+        android:background="@color/white"
+        android:alpha="0.7"
+        android:textStyle="bold"
+        android:hint="Time"
+        android:textColorHint="#3b3b3b"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+
+
+    <Button
+        android:id="@+id/makeareservation"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="35dp"
+        android:text="Make a Reservation"
+        android:padding="15dp"
+        android:alpha="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        android:textSize="18sp"
+        app:backgroundTint="#fa4666"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

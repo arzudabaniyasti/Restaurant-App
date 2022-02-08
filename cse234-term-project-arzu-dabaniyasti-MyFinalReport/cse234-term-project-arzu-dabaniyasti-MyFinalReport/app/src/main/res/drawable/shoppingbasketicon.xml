@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dither="true"
+        android:shape="oval"
+        android:useLevel="true">
+        <size
+            android:width="50in"
+            android:height="50in" />
+        <solid android:color="#fa4666" />
+
+
+    </shape>
+</item>
+<item android:drawable="@drawable/ic_baseline_shopping_basket_24" />
+</layer-list>

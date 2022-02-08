@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cse234termproject">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Cse234termproject">
+        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".PreviousOrderActivity" />
+        <activity android:name=".CurrentOrderActivity" />
+        <activity android:name=".ConfirmBasketActivity" />
+        <activity android:name=".AddNewCardActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".ReservationActivity" />
+        <activity android:name=".FavoritesActivity" />
+        <activity android:name=".BasketActivity" />
+        <activity android:name=".ProductDetailActivity" />
+        <activity android:name=".CategoryAllActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".LogInActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
